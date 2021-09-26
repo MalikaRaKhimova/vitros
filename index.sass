@@ -1,0 +1,243 @@
+@mixin fontType($fontSize, $fontFamily, $fontWeight, $lineHeight)
+    font-size: $fontSize
+    font-family: $fontFamily
+    font-weight: $fontWeight
+    line-height: $lineHeight
+
+*, *after, *before 
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body
+    font-size: 1.6rem
+    font-family: 'Inter', sans-serif
+    font-family: 'Roboto', sans-serif
+    margin: 0
+
+footer
+    background: #F7F7F7
+    
+
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: 0
+    color: #212121
+    &:hover
+        color: #E44232
+
+.flex 
+    display: flex
+    justify-content: flex-start
+    align-content: center
+    flex-wrap: wrap
+
+
+.container
+    max-width: 1180px
+    margin: 0 auto
+
+.info
+    background: #02000D
+    color: #fff
+    margin: 0
+    &__item
+        margin: 8px 50px 8px 0
+    p
+        text-align: center
+        margin: 0
+
+.medium
+    @include fontType(1.6rem, Inter, 400, 2.4rem)
+
+
+.icon
+    fill: #fff !important
+    width: 20px
+    height: 20px
+    padding-right: 10px
+    padding-bottom: 5px
+    vertical-align: middle
+
+.nav
+    background: #F7F7F7
+    box-shadow: 0px 4px 10px rgba(224, 224, 224, 0.1)
+    &__list
+        display: flex
+        justify-content: space-between
+        align-content: center
+    &__item
+        width: fit-content
+        margin-top: 2.8rem
+        margin-bottom: 2.8rem
+        margin-left: 4rem
+        color: #02000D
+        align-self: center
+    &__btn
+        border: 1px solid #E44232
+        box-sizing: border-box
+        border-radius: 8px
+        padding: .8rem 3.4rem
+        &:hover
+            border: 1px solid #fff
+            background: #E44232
+            color: #fff
+    &__icon
+        width: 11.18px
+        height: 6.59px
+        padding-right: 0
+        padding-left: 7.41px
+
+.banner
+    flex-wrap: nowrap
+    margin-top: 100px
+    &__text
+        @include fontType(4rem, Inter, 600, 5.6rem)
+        color: #263238
+        margin-bottom: 5.2rem
+    &__button
+        color: #fff
+        background: #E44232
+        border-radius: 8px
+        border: 0
+        filter: drop-shadow(0px 8px 15px rgba(228, 66, 50, 0.2))
+        padding: 1.2rem 4.5rem
+        
+.header
+    @include fontType(3.6rem, Inter, 500, 4.3rem)
+    color: #263238
+    &::after
+        content: ''
+        border: 3px solid #E44232
+        display: block
+        width: 123px
+        margin-top: 8px
+        border-radius: 3px 
+    
+.services
+    &__list
+        flex-wrap: nowrap
+    &__box
+        flex-flow: wrap column
+        border: 1px solid #DDDDDD
+        border-radius: 8px
+        margin-right: 2.4rem
+        margin-bottom: 8rem
+        width: 17.7rem
+        cursor: pointer
+        &:hover
+            border: 1px solid #E44232
+            box-shadow: 4px 8px 15px rgba(228, 66, 50, 0.1)
+    &__icon
+        margin-top: 2.4rem
+    &__text
+        @include fontType(1.6rem, Roboto, 400, 18.75px)
+        color: #263238
+        margin: 1.6rem 2.4rem 2rem 2.4rem 
+        text-align: center
+
+
+.about
+    &__text
+        @include fontType(1.8rem, Inter, 400, 32px)
+        color: #212121
+        text-align: left
+    &__left
+        margin-right: 80px
+    &__right
+        margin-top: 25px
+
+.news
+    margin-top: 10rem
+    &__box
+        display: inline-block
+        border: 1px solid #DDDDDD
+        border-radius: 8px
+        margin-right: 2.4rem
+        margin-bottom: 2.4rem
+        &:hover
+            border: 1px solid #E44232
+            box-shadow: 0px 8px 15px rgba(228, 66, 50, 0.2)
+    &__flex
+        display: flex
+        flex-wrap: nowrap
+    &__left
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        flex-wrap: wrap
+        margin: 15px 16px
+    &__data
+        @include fontType(1.6rem, Roboto, 400, 18.75px)
+        margin-bottom: 6px
+        color: #7A7A7A
+    &__title
+        @include fontType(1.8rem, Inter, 600, 2.4rem)
+        color: #263238
+        margin-bottom: 8px
+    &__text
+        @include fontType(1.4rem, Roboto, 400, 2.4rem)
+        color: #455A64
+        margin-bottom: 1.6rem
+    &__button
+        vertical-align: middle
+    &__link
+        text-decoration: none
+        color: #C4C4C4
+        @include fontType(1.6rem, Inter, 500, 2.4rem)
+        
+        &:hover
+            color: #E44232
+        &::after
+            content: '-->'
+            margin-left: 12px
+            transition: margin-left .15s
+
+.news__link:hover::after
+  margin-left: 19px
+
+
+.bottom
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-top: 8rem
+    &__box
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        margin-top: 5.5rem
+        margin-bottom: 6.4rem
+    &__text
+        margin-top: 3rem
+        margin-bottom: 3rem
+        text-align: left
+    li
+        margin-bottom: 9px
+    &__last
+        margin-top: 7rem
+        @include fontType(2.4rem, Roboto, 400, 3.2rem)
+        
+
+
+
+
+                
+
+
+        
+        
+        
+         
+
+            
+        
+
+    
